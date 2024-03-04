@@ -58,6 +58,7 @@ L:RegisterTranslations("enUS", function() return {
 ["Healcomm Text Position"] = true,
 ["Version Checking"] = true,
 ["Draggable"] = true,
+["Locked"] = true,
 
 ["CombatEvents"] = {
 	["CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS"] = "(%a+) gains %a.+", --%a on the last just to make sure its not a digit
@@ -92,7 +93,7 @@ L:RegisterTranslations("enUS", function() return {
 ["position_tooltip"] = "Shift+Ctrl = 100\nShift = 10",
 ["draggable_tooltip"] = "Note: Possible client crash bug\n           Smart Center disabled",
 ["icon_tooltip"] = "Toggle to invert icon display.",
-
+["locked_tooltip"] = "Lock grid in place.",
 
 } end)
 
@@ -187,5 +188,6 @@ L:RegisterTranslations("ruRU", function() return {
 ["powercolor_tooltip"] = true,
 ["position_tooltip"] = "Shift+Ctrl = 100\nShift = 10",
 ["draggable_tooltip"] = true,
+["locked_tooltip"] = true,
 
 } end)

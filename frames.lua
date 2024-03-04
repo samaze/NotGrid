@@ -83,12 +83,12 @@ function NotGrid:CreateUnitFrame(unitid,raidindex)
 	end)
 
 	f:SetScript("OnDragStart", function()  -- on drag of any unit frame will drag the NotGridContainer frame
-		if self.o.draggable then
+		if self.o.draggable and self.o.locked then
 			self.Container:StartMoving()
 		end
 	end)
 	f:SetScript("OnDragStop", function()
-		if self.o.draggable then
+		if self.o.draggable and self.o.locked then
 			self.Container:StopMovingOrSizing()
 		end
 	end)

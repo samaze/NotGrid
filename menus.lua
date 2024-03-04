@@ -31,7 +31,10 @@ local menuarray = {
 		conflict = {smartcenter = true,containeroffx = true,},
 		tooltip = L["draggable_tooltip"],
 	},
-
+	{text = L["Locked"],
+		toggle = "locked",
+		tooltip = L["locked_tooltip"],
+	},
 	{text = "",},
 
 	{text = L["Unit Width"], 

@@ -114,6 +114,7 @@ local DefaultOptions = {
 
 	["draggable"] = false,
 	["showmenuhint"] = true,
+	["locked"] = false,
 }
 
 function NotGrid:SetDefaultOptions() -- this will run on initialization and make sure everything is set. We can also use it if we wipe the NotGridOptions table and want to load it up with defaults
