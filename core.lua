@@ -362,6 +362,15 @@ function SlashCmdList.NOTGRIDCAST(spell, editbox)
 			end
 		end
 	end
+	-- LOLO: Add the following. Casting macro now checks:
+	--       mouseover -> target (friendly) -> player
+	if unitid == nil then
+		if UnitIsFriend("player", "target") then
+			unitid = "target"
+		else 
+			unitid = "player"
+		end
+	end
 	NotGrid:CastHandle(spell,unitid)
 end
 
