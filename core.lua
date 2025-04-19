@@ -233,7 +233,7 @@ function NotGrid:UNIT_AURA(unitid)
 
 	local auratable = self.Compost:Acquire() -- I only care about buffname for buffs -- reset every time
 
-	if f and UnitExists(unitid) then
+	if f and UnitExists(unitid) then 
 		--get buff info -- loop through every buff and adds info to table
 		local bi = 1
 		while (UnitBuff(unitid,bi) ~= nil) do
@@ -360,15 +360,6 @@ function SlashCmdList.NOTGRIDCAST(spell, editbox)
 				local lsRank = LazySpell:CalculateRank(lsSpell, unitid)
 				spell = lsSpell.."(Rank "..lsRank..")"
 			end
-		end
-	end
-	-- LOLO: Add the following. Casting macro now checks:
-	--       mouseover -> target (friendly) -> player
-	if unitid == nil then
-		if UnitIsFriend("player", "target") then
-			unitid = "target"
-		else 
-			unitid = "player"
 		end
 	end
 	NotGrid:CastHandle(spell,unitid)
